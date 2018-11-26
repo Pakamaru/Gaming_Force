@@ -268,7 +268,7 @@ function setDBuserStat(id, stat, val){
       else
         return "invalid value";
       }else
-    if(stat === "jp" || stat === "jump" || stat === "jump_power"){
+    if(stat === "jp" || stat === "jump" || stat === "jump_power" || stat === "jump_force" || stat === "jf"){
       if(checkInt(parseSuffix(val)))
         DBuser.spts_jp = parseSuffix(val);
       else
