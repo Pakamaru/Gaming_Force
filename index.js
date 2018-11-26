@@ -54,7 +54,7 @@ client.on("message", async message => {
   }
 
   if(command === "stats"){
-    if(!message.member.roles.has('515156221754605578')){
+    if(!message.member.roles.find("name", "stat_banned")){
       let subcommand = (args.indexOf(' ') === -1)? args : args.substr(0, args.indexOf(' '));
       args = args.slice(subcommand.length+1);
       let m = await message.channel.send("Loading ...");
