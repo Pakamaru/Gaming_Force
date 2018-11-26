@@ -274,7 +274,7 @@ function setDBuserStat(id, stat, val){
       else
         return "invalid value";
       }else
-    if(stat === "pp" || stat === "psychic" || stat === "psy" || stat === "psychic_power"){
+    if(stat === "pp" || stat === "psychic" || stat === "psy" || stat === "psychic_power" || stat === "psych"){
       if(checkInt(parseSuffix(val)))
         DBuser.spts_pp = parseSuffix(val);
       else
