@@ -1,5 +1,5 @@
 const botconfig = require("./botconfig.json");
-const bottoken = require("./token.json");
+const bottoken = process.env.token;
 const Discord = require("discord.js");
 const SQLite = require("better-sqlite3");
 const sql = new SQLite('./spts.sqlite');
@@ -377,4 +377,4 @@ function deleteStats(u){
   client.deleteSPTS.run(u.id);
 }
 
-client.login(bottoken.token);
+client.login(bottoken);
