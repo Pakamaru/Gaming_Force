@@ -1,0 +1,15 @@
+{
+  "name": "gaming-force-bot",
+  "version": "1.0.0",
+  "description": "A bot for the Discord server DAD's gaming force. Right now it will only be used for the game Super Power Training Simulator on the gaming platform roblox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amaru",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^5.0.1",
+    "discord.js": "^11.4.2"
+  }
+}

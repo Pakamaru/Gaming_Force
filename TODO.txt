@@ -1,0 +1,6 @@
+nieuwe tabel met de rows:
+- discord_id
+- invite_code
+- join_code
+- redeemed
+SELECT * FROM [tabel] WHERE join_code = ${user.invite_code}
