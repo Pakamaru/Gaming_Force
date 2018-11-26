@@ -54,7 +54,8 @@ client.on("message", async message => {
   }
 
   if(command === "stats"){
-    if(!message.member.roles.find("name", "stat_banned")){
+    let rban = message.guild.roles.find("name", "stat_banned");
+    if(!message.member.roles.has(rban.id)){
       let subcommand = (args.indexOf(' ') === -1)? args : args.substr(0, args.indexOf(' '));
       args = args.slice(subcommand.length+1);
       let m = await message.channel.send("Loading ...");
@@ -95,8 +96,8 @@ client.on("message", async message => {
             m.edit("```Markdown\nPlease give the user you want to unban\n```");
           }else if(user == message.mentions.users.first()){
             user = message.mentions.users.first();
-            if(message.guild.members.get(user.id).roles.has('515156221754605578')){
-              message.guild.members.get(user.id).removeRole('515156221754605578');
+            if(message.guild.members.get(user.id).roles.has(rban.id)){
+              message.guild.members.get(user.id).removeRole(rban);
               m.edit("```Markdown\nSuccesfully unbanned "+user.username+"!\n```");
             }else{
               m.edit("```Markdown\nThis user is not banned!\n```");
