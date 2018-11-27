@@ -1,4 +1,5 @@
+.git
 node_modules/
+databases/
+TODO.txt
 package-lock.json
-spts.sqlite
-*.sqlite
